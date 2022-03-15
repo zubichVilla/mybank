@@ -1,11 +1,13 @@
 package com.zube.service;
 
 import com.zube.model.Transaction;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
+@Component
 public class TransactionService {
 
     List<Transaction> transactions = new CopyOnWriteArrayList<>();
