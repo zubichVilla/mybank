@@ -16,11 +16,14 @@ public class Transaction {
 
     private String reference;
 
-    public Transaction(Integer amount, String reference, LocalDateTime timestamp) {
+    private String slogan;
+
+    public Transaction(Integer amount, String reference, LocalDateTime timestamp,  String slogan) {
         this.id = UUID.randomUUID().toString();
         this.timestamp = timestamp;
         this.amount = amount;
         this.reference = reference;
+        this.slogan = slogan;
     }
 
     public String getId() {
@@ -53,5 +56,13 @@ public class Transaction {
 
     public void setReference(String reference) {
         this.reference = reference;
+    }
+
+    public String getSlogan() {
+        return slogan;
+    }
+
+    public void setSlogan(String slogan) {
+        this.slogan = slogan;
     }
 }
